@@ -18,6 +18,7 @@ body {
   font-family: "Syne", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  color: var(--dark-color);
 }
 
 .container {
@@ -105,7 +106,6 @@ button {
 .title {
   font-size: 60px;
   font-weight: 700;
-  color: var(--dark-color);
 }
 @media (max-width: 1024px) {
   .title {
@@ -121,7 +121,7 @@ button {
 .doc {
   font-size: 18px;
   font-weight: 400;
-  color: #868686;
+  opacity: 0.8;
   margin: 0rem auto;
   max-width: 600px;
   margin-top: 0.8rem;
@@ -160,7 +160,7 @@ button {
 }
 
 .nav-container {
-  background: white !important;
+  background: white;
   padding: 2rem 0;
   box-shadow: 0 4px 2px -2px rgba(25, 28, 33, 0.269);
 }
@@ -172,6 +172,7 @@ button {
 .nav-container .theme-change {
   width: 33px;
   height: 31.29px;
+  cursor: pointer;
 }
 .nav-container nav {
   display: flex;
@@ -587,6 +588,7 @@ button {
   font-weight: 700;
   padding: 1.5rem 0rem;
   margin-top: 2rem;
+  color: var(--dark-color);
 }
 @media (max-width: 1024px) {
   .gallery .cards .card-container .card h1 {
@@ -635,6 +637,7 @@ button {
   text-align: center;
   padding: 10rem 0rem;
   background-color: rgba(255, 255, 255, 0.3294117647);
+  margin-bottom: -10px;
 }
 @media (max-width: 1024px) {
   .services {
@@ -676,7 +679,6 @@ button {
 .services .content .item h1 {
   font-size: 28px;
   font-weight: 600;
-  color: var(--dark-color);
   opacity: 0.8;
   margin: 1rem 0rem;
   text-align: center;
@@ -689,7 +691,6 @@ button {
 .services .content .item p {
   font-size: 20px;
   font-weight: 100;
-  color: var(--dark-color);
   opacity: 0.8;
   line-height: 28px;
   text-align: center;
@@ -763,13 +764,11 @@ footer .content .item {
   }
 }
 footer .content .item h4 {
-  color: var(--dark-color);
   opacity: 0.8;
   font-family: 800;
   font-size: 16px;
 }
 footer .content .item p {
-  color: var(--dark-color);
   opacity: 0.9;
   font-family: 400;
   font-size: 14px;

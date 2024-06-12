@@ -282,6 +282,54 @@
 
         mobileMenuBtn.addEventListener("click", toggleMenu);
         mobileMenuBtnClose.addEventListener("click", toggleMenu);
+
+        //  theme change
+        const themeChangeBtn = document.querySelector(".theme-change");
+        let isOriginalTheme = true;
+
+        themeChangeBtn.addEventListener("click", function () {
+          if (isOriginalTheme) {
+            document.body.style.backgroundImage = "url('./assets/dark-bg.png')";
+            document.body.style.color = "#FFFFFF";
+            document.querySelector(".nav-container").style.backgroundColor =
+              "#1E1E1E";
+            document.querySelector("footer").style.backgroundColor = "#1E1E1E";
+            document.querySelector(".contact").style.backgroundImage =
+              "url('./assets/Services-bg-dark.png')";
+
+            document.querySelector(".services").style.backgroundImage =
+              "url('./assets/dark-service-bg.png')";
+            document.querySelectorAll(".menu-bar li a").forEach((link) => {
+              link.style.color = "white";
+            });
+            document.querySelector(".line-one").src =
+              "./assets/line-dark-1.png";
+            document.querySelector(".line-two").src =
+              "./assets/line-dark-2.png";
+            document.querySelector(".line-three").src =
+              "./assets/line-dark-3.png";
+            document.querySelector(".line-four").src =
+              "./assets/line-dark-4.png";
+          } else {
+            document.body.style.backgroundImage = "none";
+            document.body.style.color = "#252525";
+            document.querySelector(".nav-container").style.backgroundColor =
+              "#FFFFFF";
+            document.querySelector("footer").style.backgroundColor = "white";
+            document.querySelector(".contact").style.backgroundImage =
+              "url('./assets/contact-bg.png')";
+
+            document.querySelectorAll(".menu-bar li a").forEach((link) => {
+              link.style.color = "#252525";
+            });
+            document.querySelector(".line-one").src = "./assets/Vector 16.png";
+            document.querySelector(".line-two").src = "./assets/Vector 17.png";
+            document.querySelector(".line-three").src =
+              "./assets/Vector 18.png";
+            document.querySelector(".line-four").src = "./assets/Vector 19.png";
+          }
+          isOriginalTheme = !isOriginalTheme;
+        });
       });
     </script>
   </body>
