@@ -719,12 +719,12 @@ button {
   align-items: center;
   gap: 5rem;
 }
-.contact .content .title {
-  text-align: center;
-}
 @media (max-width: 768px) {
   .contact .content {
     flex-direction: column;
+  }
+  .contact .content .title {
+    text-align: center;
   }
 }
 
