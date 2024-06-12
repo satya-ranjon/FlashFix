@@ -634,6 +634,13 @@ button {
 .services {
   text-align: center;
   padding: 10rem 0rem;
+  background-color: rgba(255, 255, 255, 0.3294117647);
+}
+@media (max-width: 1024px) {
+  .services {
+    padding: 6.1rem 0rem;
+    margin-top: 92px;
+  }
 }
 .services .content {
   margin-top: 5rem;
