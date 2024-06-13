@@ -1,6 +1,6 @@
 body {
   font-family: "Poppins", sans-serif;
-  background: url("./assets/bg-pricing.png");
+  background: url("../assets/bg-pricing.png");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -175,4 +175,4 @@ body {
   font-size: 15px;
   font-weight: 500;
   margin-top: 4px;
-}/*# sourceMappingURL=pricing.css.map */
+} /*# sourceMappingURL=pricing.css.map */

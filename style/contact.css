@@ -1,6 +1,6 @@
 body {
   font-family: "Poppins", sans-serif;
-  background: url("./assets/bg-pricing.png");
+  background: url("../assets/bg-pricing.png");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -25,7 +25,9 @@ body {
   align-items: start;
   gap: 4rem;
   background: rgba(255, 255, 255, 0.1294117647);
-  box-shadow: 0px 2px 3px -1px rgba(0, 0, 0, 0.1), 0px 1px 0px 0px rgba(25, 28, 33, 0.02), 0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+  box-shadow: 0px 2px 3px -1px rgba(0, 0, 0, 0.1),
+    0px 1px 0px 0px rgba(25, 28, 33, 0.02),
+    0px 0px 0px 1px rgba(25, 28, 33, 0.08);
   border-radius: 20px;
   overflow: hidden;
 }
@@ -177,4 +179,4 @@ body {
   display: block;
   background: transparent;
   padding-top: 5.5px;
-}/*# sourceMappingURL=contact.css.map */
+} /*# sourceMappingURL=contact.css.map */
