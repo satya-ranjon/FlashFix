@@ -1,0 +1,178 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: url("./assets/bg-pricing.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: var(--dark-color);
+}
+
+.hero {
+  margin-top: 126px;
+  margin-bottom: 80px;
+}
+.hero .contant {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 4rem;
+}
+@media (max-width: 768px) {
+  .hero .contant {
+    gap: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  .hero .contant {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.hero .contant h1 {
+  font-size: 40px;
+  font-weight: 400;
+}
+.hero .contant p {
+  max-width: 729px;
+  text-align: justify;
+  margin-top: 25px;
+  opacity: 0.7;
+}
+@media (max-width: 768px) {
+  .hero .contant p {
+    max-width: 399px;
+  }
+}
+.hero .contant .month-year {
+  margin-bottom: 1rem;
+  width: 220px;
+  height: 44px;
+  overflow: hidden;
+  border-radius: 22px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero .contant .month-year button {
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 22px;
+  font-weight: 500;
+  padding: 0.6rem 0rem;
+}
+.hero .contant .month-year button:nth-child(1) {
+  color: white;
+  background-color: var(--primary-color);
+}
+.hero .contant .month-year button:nth-child(2) {
+  color: var(--dark-color);
+  background-color: white;
+}
+
+.pricing {
+  background: url("./assets/pricing-card-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 4.8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 8rem;
+}
+@media (max-width: 1024px) {
+  .pricing {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .pricing {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .pricing {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+.pricing .card {
+  padding: 2rem;
+  border-radius: 26px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  position: relative;
+  padding-top: 5.2rem;
+  height: 370px;
+}
+.pricing .card.active {
+  background-color: #d2e3ed;
+}
+.pricing .card .most-popular {
+  font-size: 10px;
+  font-weight: 900;
+  width: 121px;
+  height: 27px;
+  color: #00a6d6;
+  background-color: #ecf7fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+.pricing .card button {
+  background-color: #b8b6b6;
+  border-radius: 24px;
+  font-size: 15px;
+  color: white;
+  width: 207px;
+  height: 45px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pricing .card button.active {
+  background-color: var(--primary-color);
+}
+.pricing .card .price {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 30px;
+  opacity: 0.9;
+}
+.pricing .card h3 {
+  font-size: 28px;
+  line-height: 25px;
+  font-weight: 600;
+  opacity: 0.8;
+  margin-top: 20px;
+}
+.pricing .card p {
+  max-width: 232px;
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+.pricing .card .list .item span {
+  opacity: 0.8;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 4px;
+}/*# sourceMappingURL=pricing.css.map */

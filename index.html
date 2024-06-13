@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FlashFix</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style/global.css" />
+    <link rel="stylesheet" href="./style/index.css" />
   </head>
   <body>
     <header>
@@ -14,10 +15,10 @@
             <span class="logo">FlashFix.Pro!</span>
             <div class="flex justify-start align-center gap-4">
               <ul class="menu-bar">
-                <li><a class="active" href="#">Home</a></li>
-                <li><a class="" href="#">About</a></li>
-                <li><a class="" href="#">Pricing</a></li>
-                <li><a class="" href="#">Contact</a></li>
+                <li><a class="active" href="./index.html">Home</a></li>
+                <li><a class="" href="./about.html">About</a></li>
+                <li><a class="" href="./pricing.html">Pricing</a></li>
+                <li><a class="" href="./contact.html">Contact</a></li>
                 <button class="get-start-btn-mobile">Get Started</button>
               </ul>
               <ul>
@@ -266,42 +267,19 @@
       </div>
     </div>
 
+    <script src="./js/global.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
-        const mobileMenuBtnClose = document.querySelector(
-          ".mobile-menu-btn-close"
-        );
-        const menuBar = document.querySelector(".menu-bar");
-
-        function toggleMenu() {
-          menuBar.classList.toggle("active");
-          mobileMenuBtn.classList.toggle("hidden");
-          mobileMenuBtnClose.classList.toggle("hidden");
-        }
-
-        mobileMenuBtn.addEventListener("click", toggleMenu);
-        mobileMenuBtnClose.addEventListener("click", toggleMenu);
-
-        //  theme change
         const themeChangeBtn = document.querySelector(".theme-change");
         let isOriginalTheme = true;
 
         themeChangeBtn.addEventListener("click", function () {
           if (isOriginalTheme) {
             document.body.style.backgroundImage = "url('./assets/dark-bg.png')";
-            document.body.style.color = "#FFFFFF";
-            document.querySelector(".nav-container").style.backgroundColor =
-              "#1E1E1E";
-            document.querySelector("footer").style.backgroundColor = "#1E1E1E";
-            document.querySelector(".contact").style.backgroundImage =
-              "url('./assets/Services-bg-dark.png')";
-
             document.querySelector(".services").style.backgroundImage =
               "url('./assets/dark-service-bg.png')";
-            document.querySelectorAll(".menu-bar li a").forEach((link) => {
-              link.style.color = "white";
-            });
+            document.querySelector(".contact").style.backgroundImage =
+              "url('./assets/Services-bg-dark.png')";
             document.querySelector(".line-one").src =
               "./assets/line-dark-1.png";
             document.querySelector(".line-two").src =
@@ -311,17 +289,11 @@
             document.querySelector(".line-four").src =
               "./assets/line-dark-4.png";
           } else {
-            document.body.style.backgroundImage = "none";
-            document.body.style.color = "#252525";
-            document.querySelector(".nav-container").style.backgroundColor =
-              "#FFFFFF";
-            document.querySelector("footer").style.backgroundColor = "white";
+            document.body.style.backgroundImage = "url('./assets/bg.png')";
+            document.querySelector(".services").style.backgroundColor =
+              "ffffff54";
             document.querySelector(".contact").style.backgroundImage =
               "url('./assets/contact-bg.png')";
-
-            document.querySelectorAll(".menu-bar li a").forEach((link) => {
-              link.style.color = "#252525";
-            });
             document.querySelector(".line-one").src = "./assets/Vector 16.png";
             document.querySelector(".line-two").src = "./assets/Vector 17.png";
             document.querySelector(".line-three").src =
