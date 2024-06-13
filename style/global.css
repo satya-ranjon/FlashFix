@@ -315,7 +315,7 @@ footer .content .item p {
 
 .contact {
   padding: 182px 0px;
-  background-image: url("./assets/contact-bg.png");
+  background-image: url("../assets/contact-bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -331,6 +331,10 @@ footer .content .item p {
   align-items: center;
   gap: 5rem;
 }
+.contact .content .title {
+  text-align: start;
+}
+
 @media (max-width: 768px) {
   .contact .content {
     flex-direction: column;
