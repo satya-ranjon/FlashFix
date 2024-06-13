@@ -152,7 +152,7 @@ body {
 }
 .pricing .card .price {
   font-size: 36px;
-  font-weight: 800;
+  font-weight: 900;
   line-height: 30px;
   opacity: 0.9;
 }
@@ -161,7 +161,7 @@ body {
   line-height: 25px;
   font-weight: 600;
   opacity: 0.8;
-  margin-top: 20px;
+  margin-top: 36.1px;
 }
 .pricing .card p {
   max-width: 232px;
