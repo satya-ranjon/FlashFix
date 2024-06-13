@@ -50,6 +50,7 @@ body.dark input {
 
 a.active {
   color: var(--primary-color) !important;
+  font-weight: 500 !important;
 }
 
 button {
@@ -226,7 +227,12 @@ button {
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 2rem;
+  gap: 60px;
+}
+@media (max-width: 1024px) {
+  .nav-container nav ul {
+    gap: 2rem;
+  }
 }
 @media (max-width: 600px) {
   .nav-container nav ul {
@@ -238,9 +244,10 @@ button {
 }
 .nav-container nav ul li a {
   color: var(--dark-color);
-  font-weight: 500;
+  font-weight: 400;
   text-decoration: none;
   font-size: 20px;
+  font-family: "Syne", sans-serif;
 }
 
 footer {
