@@ -232,27 +232,44 @@
         const themeChangeBtn = document.querySelector(".theme-change");
         let isOriginalTheme = true;
 
+        // Apply saved theme preference
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme == "dark") {
+          applyDarkTheme();
+          isOriginalTheme = false;
+        } else {
+          applyLightTheme();
+        }
+
         themeChangeBtn.addEventListener("click", function () {
           if (isOriginalTheme) {
-            document.body.style.backgroundImage =
-              "url('./assets/dark-bg -pricing.png')";
-            document.querySelector(".contact").style.backgroundImage =
-              "url('./assets/Services-bg-dark.png')";
-            document.querySelector(".pricing").style.background = "#5955555c";
-            document.querySelector(".pricing .card.active").style.background =
-              "#6c7276";
+            applyDarkTheme();
+            localStorage.setItem("theme", "dark");
           } else {
-            document.body.style.backgroundImage =
-              "url('./assets/bg-pricing.png')";
-            document.querySelector(".contact").style.backgroundImage =
-              "url('./assets/contact-bg.png')";
-            document.querySelector(".pricing").style.background =
-              "url('./assets/pricing-card-bg.png')";
-            document.querySelector(".pricing .card.active").style.background =
-              "#d2e3ed";
+            applyLightTheme();
+            localStorage.setItem("theme", "light");
           }
           isOriginalTheme = !isOriginalTheme;
         });
+        function applyDarkTheme() {
+          document.body.style.backgroundImage =
+            "url('./assets/dark-bg -pricing.png')";
+          document.querySelector(".contact").style.backgroundImage =
+            "url('./assets/Services-bg-dark.png')";
+          document.querySelector(".pricing").style.background = "#5955555c";
+          document.querySelector(".pricing .card.active").style.background =
+            "#6c7276";
+        }
+        function applyLightTheme() {
+          document.body.style.backgroundImage =
+            "url('./assets/bg-pricing.png')";
+          document.querySelector(".contact").style.backgroundImage =
+            "url('./assets/contact-bg.png')";
+          document.querySelector(".pricing").style.background =
+            "url('./assets/pricing-card-bg.png')";
+          document.querySelector(".pricing .card.active").style.background =
+            "#d2e3ed";
+        }
       });
     </script>
     <script src="./js/global.js"></script>

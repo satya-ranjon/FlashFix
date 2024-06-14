@@ -238,27 +238,50 @@
         const themeChangeBtn = document.querySelector(".theme-change");
         let isOriginalTheme = true;
 
+        // Apply saved theme preference
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme == "dark") {
+          applyDarkTheme();
+          isOriginalTheme = false;
+        } else {
+          applyLightTheme();
+        }
+
         themeChangeBtn.addEventListener("click", function () {
-          document
-            .querySelectorAll(".reached-out .items .item")
-            .forEach((link) => {
-              link.classList.toggle("dark");
-            });
           if (isOriginalTheme) {
-            document.body.style.backgroundImage =
-              "url('./assets/dark-bg -pricing.png')";
-
-            document.querySelector(".contact").style.backgroundImage =
-              "url('./assets/Services-bg-dark.png')";
+            applyDarkTheme();
+            localStorage.setItem("theme", "dark");
           } else {
-            document.body.style.backgroundImage =
-              "url('./assets/bg-pricing.png')";
-
-            document.querySelector(".contact").style.backgroundImage =
-              "url('./assets/contact-bg.png')";
+            applyLightTheme();
+            localStorage.setItem("theme", "light");
           }
           isOriginalTheme = !isOriginalTheme;
         });
+        function applyDarkTheme() {
+          document.body.style.backgroundImage =
+            "url('./assets/dark-bg -pricing.png')";
+
+          document.querySelector(".contact").style.backgroundImage =
+            "url('./assets/Services-bg-dark.png')";
+
+          document
+            .querySelectorAll(".reached-out .items .item")
+            .forEach((link) => {
+              link.classList.add("dark");
+            });
+        }
+        function applyLightTheme() {
+          document.body.style.backgroundImage =
+            "url('./assets/bg-pricing.png')";
+
+          document.querySelector(".contact").style.backgroundImage =
+            "url('./assets/contact-bg.png')";
+          document
+            .querySelectorAll(".reached-out .items .item")
+            .forEach((link) => {
+              link.classList.remove("dark");
+            });
+        }
       });
     </script>
     <script src="./js/global.js"></script>

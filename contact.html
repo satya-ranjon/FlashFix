@@ -219,32 +219,51 @@
         const themeChangeBtn = document.querySelector(".theme-change");
         let isOriginalTheme = true;
 
+        // Apply saved theme preference
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme == "dark") {
+          applyDarkTheme();
+          isOriginalTheme = false;
+        } else {
+          applyLightTheme();
+        }
+
         themeChangeBtn.addEventListener("click", function () {
-          document
-            .querySelector(".contact-form .content")
-            .classList.toggle("active");
-
           if (isOriginalTheme) {
-            document.body.style.backgroundImage =
-              "url('./assets/dark-bg -pricing.png')";
-
-            document
-              .querySelectorAll(".contact-form .content .socile .icon-box")
-              .forEach((link) => {
-                link.style.background = "#ffffff24";
-              });
+            applyDarkTheme();
+            localStorage.setItem("theme", "dark");
           } else {
-            document.body.style.backgroundImage =
-              "url('./assets/bg-pricing.png')";
-
-            document
-              .querySelectorAll(".contact-form .content .socile .icon-box")
-              .forEach((link) => {
-                link.style.background = "white";
-              });
+            applyLightTheme();
+            localStorage.setItem("theme", "light");
           }
           isOriginalTheme = !isOriginalTheme;
         });
+        function applyDarkTheme() {
+          document.body.style.backgroundImage =
+            "url('./assets/dark-bg -pricing.png')";
+
+          document
+            .querySelectorAll(".contact-form .content .socile .icon-box")
+            .forEach((link) => {
+              link.style.background = "#ffffff24";
+            });
+          document
+            .querySelector(".contact-form .content")
+            .classList.remove("active");
+        }
+        function applyLightTheme() {
+          document.body.style.backgroundImage =
+            "url('./assets/bg-pricing.png')";
+
+          document
+            .querySelectorAll(".contact-form .content .socile .icon-box")
+            .forEach((link) => {
+              link.style.background = "white";
+            });
+          document
+            .querySelector(".contact-form .content")
+            .classList.add("active");
+        }
       });
     </script>
     <script src="./js/global.js"></script>
