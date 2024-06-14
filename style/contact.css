@@ -76,7 +76,7 @@ body {
 .contact-form .content p {
   font-size: 18px;
   font-weight: 400;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 @media (max-width: 768px) {
   .contact-form .content {
@@ -100,7 +100,7 @@ body {
 }
 .contact-form .content .list .item span {
   max-width: 288px;
-  opacity: 0.8;
+  opacity: 0.9;
   text-align: start;
   font-size: 16px;
 }
@@ -169,11 +169,11 @@ body {
 .contact-form .form .input-bx label {
   font-size: 12px;
   font-weight: 500;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 .contact-form .form .input-bx input {
   border: none;
-  opacity: 0.7;
+  opacity: 0.9;
   outline: none;
   width: 100%;
   display: block;

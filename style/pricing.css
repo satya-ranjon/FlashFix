@@ -39,7 +39,7 @@ body {
   max-width: 729px;
   text-align: justify;
   margin-top: 25px;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 @media (max-width: 768px) {
   .hero .contant p {
@@ -168,10 +168,10 @@ body {
   margin-top: 12px;
   font-size: 15px;
   font-weight: 500;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .pricing .card .list .item span {
-  opacity: 0.8;
+  opacity: 0.9;
   font-size: 15px;
   font-weight: 500;
   margin-top: 4px;
