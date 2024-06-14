@@ -72,8 +72,8 @@
             </p>
           </div>
           <div class="month-year">
-            <button>MONTHLY</button>
-            <button>YEARLY</button>
+            <button class="active" id="monthly-btn">MONTHLY</button>
+            <button class="deactive" id="yearly-btn">YEARLY</button>
           </div>
         </div>
       </div>
@@ -84,7 +84,7 @@
         <div class="card">
           <div class="">
             <div class="flex justify-start align-end" style="gap: 4px">
-              <span class="price">$19</span> /month
+              <span class="price">$19</span> <span class="time">/month</span>
             </div>
             <h3>Starter</h3>
             <p>Unleash the power of automation.</p>
@@ -108,7 +108,7 @@
         <div class="card">
           <div class="">
             <div class="flex justify-start align-end" style="gap: 4px">
-              <span class="price">$54</span> /month
+              <span class="price">$54</span> <span class="time">/month</span>
             </div>
             <h3>Professional</h3>
             <p>Advanced tools to take your work to the next level.</p>
@@ -137,7 +137,7 @@
           <div class="most-popular">MOST POPULAR</div>
           <div class="">
             <div class="flex justify-start align-end" style="gap: 4px">
-              <span class="price">$89</span> /month
+              <span class="price">$89</span> <span class="time">/month</span>
             </div>
             <h3>Company</h3>
             <p>Automation plus enterprise-grade features.</p>
@@ -269,6 +269,41 @@
             "url('./assets/pricing-card-bg.png')";
           document.querySelector(".pricing .card.active").style.background =
             "#d2e3ed";
+        }
+
+        const monthlyBtn = document.getElementById("monthly-btn");
+        const yearlyBtn = document.getElementById("yearly-btn");
+
+        const prices = document.querySelectorAll(".price");
+        const durations = document.querySelectorAll(".time");
+
+        const monthlyPrices = [19, 54, 89];
+        const yearlyPrices = [19 * 12, 54 * 12, 89 * 12];
+
+        monthlyBtn.addEventListener("click", function () {
+          setActive(monthlyBtn, yearlyBtn);
+          updatePricing(monthlyPrices, "/month");
+        });
+
+        yearlyBtn.addEventListener("click", function () {
+          setActive(yearlyBtn, monthlyBtn);
+          updatePricing(yearlyPrices, "/year");
+        });
+
+        function setActive(activeBtn, deactiveBtn) {
+          activeBtn.classList.add("active");
+          activeBtn.classList.remove("deactive");
+          deactiveBtn.classList.add("deactive");
+          deactiveBtn.classList.remove("active");
+        }
+
+        function updatePricing(pricesArray, durationText) {
+          prices.forEach((price, index) => {
+            price.textContent = `$${pricesArray[index]}`;
+          });
+          durations.forEach((duration) => {
+            duration.textContent = durationText;
+          });
         }
       });
     </script>

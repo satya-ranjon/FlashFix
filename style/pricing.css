@@ -67,11 +67,12 @@ body {
   font-weight: 500;
   padding: 0.6rem 0rem;
 }
-.hero .contant .month-year button:nth-child(1) {
+.hero .contant .month-year button.active {
   color: white;
   background-color: var(--primary-color);
 }
-.hero .contant .month-year button:nth-child(2) {
+
+.hero .contant .month-year button.deactive {
   color: var(--dark-color);
   background-color: white;
 }
