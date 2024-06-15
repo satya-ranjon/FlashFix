@@ -137,8 +137,11 @@ body {
 }
 @media (max-width: 768px) {
   .gallery .cards .line-one {
-    width: 50%;
-    height: 244.9px;
+    width: 430px;
+    /* height: 1084.9px; */
+    top: 16.7%;
+    /* width: 80%; */
+    /* height: 50%; */
   }
 }
 @media (max-width: 600px) {
@@ -156,13 +159,14 @@ body {
   .gallery .cards .line-two {
     top: 723px;
     height: 430px;
+    left: 13.2%;
   }
 }
 @media (max-width: 768px) {
   .gallery .cards .line-two {
     top: 643px;
     height: 380px;
-    left: 10%;
+    left: -0.2%;
   }
 }
 @media (max-width: 600px) {
@@ -172,9 +176,11 @@ body {
 }
 .gallery .cards .line-three {
   position: absolute;
-  top: 1583px;
-  left: 38.1%;
+  top: 1563px;
+  left: 35.4%;
   z-index: -99;
+  height: 500px;
+  width: 40%;
 }
 @media (max-width: 1024px) {
   .gallery .cards .line-three {
@@ -189,7 +195,7 @@ body {
     top: 1143px;
     left: 6.5%;
     height: 390px;
-    width: 80%;
+    width: 92.2%;
   }
 }
 @media (max-width: 600px) {
@@ -199,13 +205,13 @@ body {
 }
 .gallery .cards .line-four {
   position: absolute;
-  top: 2433px;
+  top: 2473px;
   left: 28.1%;
   z-index: -99;
 }
 @media (max-width: 1024px) {
   .gallery .cards .line-four {
-    top: 2033px;
+    top: 1983px;
     width: 50%;
     height: 420px;
   }
@@ -213,8 +219,8 @@ body {
 @media (max-width: 768px) {
   .gallery .cards .line-four {
     top: 1753px;
-    width: 45.5%;
-    height: 400px;
+    width: 55.5%;
+    height: 420px;
   }
 }
 @media (max-width: 600px) {
@@ -243,7 +249,7 @@ body {
 }
 @media (max-width: 1024px) {
   .gallery .cards .card-container:nth-child(2) {
-    top: 280px;
+    top: 270px;
   }
 }
 @media (max-width: 600px) {
@@ -303,7 +309,7 @@ body {
 }
 @media (max-width: 1024px) {
   .gallery .cards .card-container:nth-child(5) {
-    top: 1313px;
+    top: 1213px;
   }
 }
 @media (max-width: 768px) {
@@ -340,7 +346,7 @@ body {
     height: 370px;
   }
 }
-.gallery .cards .card-container .card .number img {
+.gallery .cards .card-container .card .number svg {
   position: absolute;
   top: -3.3%;
   right: -3.3%;
@@ -348,13 +354,13 @@ body {
   height: 100px;
 }
 @media (max-width: 1024px) {
-  .gallery .cards .card-container .card .number img {
+  .gallery .cards .card-container .card .number svg {
     width: 90px;
     height: 90px;
   }
 }
 @media (max-width: 768px) {
-  .gallery .cards .card-container .card .number img {
+  .gallery .cards .card-container .card .number svg {
     width: 80px;
     height: 80px;
   }
