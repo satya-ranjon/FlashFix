@@ -342,4 +342,10 @@ footer .content .item p {
   .contact .content .title {
     text-align: center;
   }
-} /*# sourceMappingURL=global.css.map */
+}
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+}
